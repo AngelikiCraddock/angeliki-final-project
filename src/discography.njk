@@ -1,0 +1,26 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Discography{% endblock %}
+
+{% block page_description %}A list of Queen's work.{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Albums</h1>
+  <p>Explore Their Work!</p>
+
+<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+  {% for album in queen.discography %}
+    <div class="col">
+      <div class="card text-bg-light border-danger h-100">
+        <img src="img/{{ album.image }}" class="card-img-top" alt="{{ album.title }} Cover">
+        <div class="card-body">
+          <h5 class="card-title">{{ album.title }}</h5>
+          <p class="card-text">{{ album.year }}</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+ </div>
+</div>
+{% endblock %}

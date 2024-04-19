@@ -20,7 +20,22 @@
 
 // Import partials
 @import 'nav';
+@import "jumbotron";
 
 h3 {
   font-size: 1.5rem;
 }
+
+.table th {
+  background-color: rgb(177, 70, 165);
+  color: rgb(38, 2, 33);
+}
+
+.table td {
+background-color: rgb(255, 213, 252);
+}
+
+.card-title a {
+  color: purple;
+}
+
